@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
   <style>
+    html {
+      height: 100%;
+    }
+
     body {
+      height: 100%;
       margin: 0;
       padding: 0;
       background-color: #000000;
       font-family: 'Audiowide';
     }
+
+    a {
+      color: #42f1c9;
+    }
+
+    a:hover {
+      color: #29f3ea;
+    }
+
     .mainBackground {
       background-size: cover;
       background-image: url('/bg1.jpg');
@@ -14,19 +28,19 @@
       height: 100%;
       width: 100%;
       background-position: center bottom;
+      z-index: -1;
     }
 
     .centeredContent {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: 100%;
-      padding: 32px;
       display: flex;
-      flex-direction: column;
+      text-align: center;
       align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+      padding: 32px 0;
+      flex-direction: column;
+      overflow-y: auto;
     }
 
     .movieBox {
@@ -81,15 +95,9 @@
       margin-top: 16px;
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1050px) {
       .movieBox {
-        width: 95%;
-      }
-
-      .centeredContent {
-        top: 10%;
-        transform: translate(-50%, -10%);
-        padding: 16px;
+        width: 90%;
       }
 
       h3 {
@@ -124,16 +132,15 @@
     <meta name="twitter:image" content="https://estfor.com/images/meta_estfor.jpg" />
 </head>
 <body>
-  <div class="mainBackground">
-    <div class="centeredContent">
-      <h1>Estfor Kingdom</h1>
-      <h2>Coming Soon!</h2>
-      <h3>In the meantime, check out the<br/><a href="https://alpha.estfor.com" target="_blank">ALPHA</a></h3>
-      <div class="movieBox">
-        <iframe class="youtubeIframe" src="https://www.youtube.com/embed/4ZMOCX5sFjs?autoplay=1&mute=0&controls=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <a href="https://twitter.com/EstforKingdom?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @EstforKingdom</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <div class="mainBackground"></div>
+  <div class="centeredContent">
+    <h1>Estfor Kingdom</h1>
+    <h2>Coming Soon!</h2>
+    <h3>Check out the <a href="https://alpha.estfor.com" target="_blank">ALPHA</a></h3>
+    <div class="movieBox">
+      <iframe class="youtubeIframe" src="https://www.youtube.com/embed/4ZMOCX5sFjs?autoplay=1&mute=0&controls=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <a href="https://twitter.com/EstforKingdom?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @EstforKingdom</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </body>
 </html>
